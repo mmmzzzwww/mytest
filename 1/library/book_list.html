@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>stack</title>
+<style type="text/css">
+<!--
+.STYLE1 {font-size: 14px}
+.STYLE4 {color: #000000}
+.STYLE5 {color: #00900B}
+.STYLE6 {font-size: 48px}
+-->
+</style>
+</head>
+
+<body  bgcolor="#616130">
+<div align="center">
+<h1 class="STYLE4 STYLE6"> book list </h1>
+</div>
+<form method = "get" class="STYLE1">
+<table border=1 align="center" bgcolor="#00CC66">
+<tr>
+<th width="87" bgcolor="#666666"><span class="STYLE4">title</span></th>
+<th width="160" bgcolor="#666666"><span class="STYLE4">author</span></th>
+<th width="90" bgcolor="#666666"><span class="STYLE4">isbn</span></th>
+<th width="120" bgcolor="#666666"><span class="STYLE4">publisher</span></th>
+<th width="138" bgcolor="#666666"><span class="STYLE4">PublishDate</span></th>
+<th width="96" bgcolor="#666666"><span class="STYLE4">price</span></th>
+<th width="62" bgcolor="#666666"><span class="STYLE4">操作</span></th>
+<th width="76" bgcolor="#666666"><span class="STYLE4">更新</span></th>
+</tr>
+{% for book in books %}
+<tr bgcolor="#993300">
+<td height="92" bgcolor="#666666"><div align="center"><span class="STYLE5"></span><a href ="/show/{{book.isbn}}/" class="STYLE4">{{book.title}}</a></div></td>
+<td bgcolor="#666666"><div align="center"><span class="STYLE4">{{book.AuthorID.name}}</span></div></td>
+<td bgcolor="#666666"><div align="center"><span class="STYLE4">{{book.isbn}}</span></div></td>
+<td bgcolor="#666666"><div align="center"><span class="STYLE4">{{book.publisher}}</span></div></td>
+<td bgcolor="#666666"><div align="center"><span class="STYLE4">{{book.PublishDate}}</span></div></td>
+<td bgcolor="#666666"><div align="center"><span class="STYLE4">{{book.price}}</span></div></td>
+<td bordercolor="#00CC66" bgcolor="#666666"><button name = "delete" value = "{{book.isbn}}" class="STYLE4">delete</button></td>
+<!---<td bgcolor="#666666"><div align="center" class="STYLE4"><a href = "/update/{{book.isbn}}/"><em>update</em></a></div></td>--->
+<td bgcolor="#666666"><div align="center"><a href= "/update/{{book.isbn}}/" class="STYLE2">
+  <input name="button2" type = "button"class="STYLE1" style="width:50px;height:20px;" value="update" button/>
+</a></div></td>
+</tr>
+</tr>
+{% endfor %}
+</table>
+
+<table width="273" border= 1 align="center" bordercolor="#00CCCC" bgcolor="#993300">
+<tr>
+  <th width="65" height="40" bgcolor="#666666"><div align="center">addbook</div></th>
+  <th width="80" bgcolor="#666666"><div align="center">return</div></th>
+</tr>
+<tr><td bgcolor="#666666"><div align="center"><a href= "/add_book/" class="STYLE2">
+  <input name="button2" type = "button"class="STYLE1" style="width:50px;height:20px;" value="add" button/>
+</a></div></td>
+<td bgcolor="#666666"><div align="center"><a href= "/begin/" class="STYLE2">
+  <input name="button2" type = "button"class="STYLE1" style="width:50px;height:20px;" value="return" button/>
+</a></div></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

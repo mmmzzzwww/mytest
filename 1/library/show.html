@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>show</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #000000}
+.STYLE2 {
+	font-size: 24px;
+	font-weight: bold;
+}
+.STYLE3 {font-size: 24px}
+-->
+</style>
+</head>
+
+<body bgcolor="#616130">
+<div align= "center">
+<h1>The Imformation of The Book</h1>
+</div>
+<table border=1 align="center" bordercolor="#616130" bgcolor="#616130">
+<tr>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE2">title</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">author</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">isbn</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">publisher</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">PublishDate</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">price</span></th>
+</tr>
+<tr>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.title}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.AuthorID.AuthorID}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.isbn}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.publisher}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.PublishDate}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.price}}</td>
+</tr>
+<tr>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">authorID</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">name</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">age</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">country</span></th>
+<th bordercolor="#FFFFFF" bgcolor="#666666"><span class="STYLE3">back</span></th>
+</tr>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.AuthorID.AuthorID}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.AuthorID.name}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.AuthorID.age}}</td>
+<td bordercolor="#FFFFFF" bgcolor="#666666">{{book.AuthorID.country}}</td>
+<td bgcolor="#666666"><div align="center"><a href= "/book_list/" class="STYLE2">
+  <input name="button2" type = "button"class="STYLE1" style="width:50px;height:20px;" value="back" button/>
+</a></div></td>
+</table>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>add_book2</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-family: "宋体";
+	color: #00CC66;
+}
+.STYLE2 {
+	color: #000000;
+	font-style: italic;
+	font-weight: bold;
+}
+.STYLE3 {font-size: 18px}
+-->
+</style>
+</head>
+<body align="center" bgcolor="#616130">
+<div align="center">
+<h1>please add the new book </h1>
+</div>
+<table border=1 align = "center" bordercolor="#000099" bgcolor="#009999">
+  <tr>
+    <th width="168" height="76" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">title</span></th>
+    <th width="137" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">author</span></th>
+    <th width="100" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">isbn</span></th>
+    <th width="168" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">publisher</span></tor="#616130">
+<div align h>
+    <th width="168" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">PublishDate</span></th>
+    <th width="168" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">price</span></th>
+	<th width="58" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">submit</span></th>
+	<th width="109" bordercolor="#660033" bgcolor="#666666"><span class="STYLE3">back</span></th> 
+  </tr>
+  <form name="input" method="post">
+    <tr>
+      <td height="88" bordercolor="#660033" bgcolor="#666666"><input type = "text" name= "title" /></td>
+      <td bordercolor="#660033" bgcolor="#666666"><select id ="content" name="AuthorID">
+        
+        
+        
+        
+        
+{% for author in authorlist %}
+
+        
+        
+        
+        
+        <option value={{author.AuthorID}}>{{author.name}}</option>
+        
+        
+        
+        
+        
+{% endfor %}
+
+      
+      
+      
+      
+      </select>
+      <a href= '/add_author/' class="STYLE2">添加</a></td>
+      <td bordercolor="#660033" bgcolor="#666666"><input type = "text" name= "isbn" /></td>
+      <td bordercolor="#660033" bgcolor="#666666"><input type = "text" name= "publisher" /></td>
+      <td bordercolor="#660033" bgcolor="#666666"><input type = "text" name= "PublishDate"/></td>
+      <td bordercolor="#660033" bgcolor="#666666"><input type = "text" name= "price" /></td>
+      <td bordercolor="#660033" bgcolor="#666666"><input type = "submit" name= "sumbit"/></td>
+      <td bgcolor="#666666"><a href= "/book_list/" class="STYLE2">
+  <input name="button" type = "button"class="STYLE1" style="width:50px;height:20px;" value="return" button/>
+</a></td>
+    </tr>
+    <strong><span class="STYLE1"></span></strong>
+  </form>
+</table>
+</body>
+</html>

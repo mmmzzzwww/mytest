@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>updata</title>
+</head>
+<body bgcolor="#616130">
+<div align= "center">
+<h1>Update The Book</h1>
+</div>
+<table border=1 align="center" bordercolor="#CCCCCC" bgcolor="#FFFFFF">
+  <form name="input" method="post">
+    <tr>
+      <th bgcolor="#666666">title</th>
+      <th bgcolor="#666666">author</th>
+      <th bgcolor="#666666">isbn</th>
+      <th bgcolor="#666666">publisher</th>
+      <th bgcolor="#666666">PublishDate</th>
+      <th bgcolor="#666666">price</th>
+      <th bgcolor="#666666">保存</th>
+      <th bgcolor="#666666">back</th>
+    </tr>
+    <tr>
+      <td height="100" bgcolor="#666666"><input type = "text" name= "title" value ="{{books.title}}"/></td>
+      <td bgcolor="#666666">{{books.AuthorID.name}}</td>
+      <td bgcolor="#666666">{{books.isbn}}</td>
+      <td bgcolor="#666666"><input type = "text" name= "publisher"value ="{{books.publisher}}"/></td>
+      <td bgcolor="#666666"><input type = "text" name= "PublishDate" value="{{books.PublishDate}}"/></td>
+      <td bgcolor="#666666"><input type = "text" name= "price" value="{{books.price}}" /></td>
+      <td bgcolor="#666666"><input type = "submit" name= "sumbit"/></td>
+      <!---<td bgcolor="#993300"><a href = "/book_list/"><em>back</em></a></td>--->
+	  <td bgcolor="#666666"><a href= "/book_list/" class="STYLE2">
+      <input type = "button"class="STYLE1" style="width:50px;height:20px;" value="return" button/></a></td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>show_book</title>
+</head>
+
+<body bgcolor="#616130">
+<div align= "center">
+<h1>Show Book</h1>
+</div>
+{% for books in book %}
+<table border=1 align="center" bordercolor="#00FF00" bgcolor="#616130">
+<tr bordercolor="#FFFFFF" bgcolor="#666666">
+<th width="192" height="45">title</th>
+<th width="192">author</th>
+<th width="155">isbn</th>
+<th width="179">publisher</th>
+<th width="144">PublishDate</th>
+<th width="133">price</th>
+</tr>
+<tr><th></th></tr>
+<tr bordercolor="#FFFFFF" bgcolor="#666666">
+<td height="48"><div align="center">{{books.title}}</div></td>
+<td><div align="center">{{books.AuthorID.AuthorID}}</div></td>
+<td><div align="center">{{books.isbn}}</div></td>
+<td><div align="center">{{books.publisher}}</div></td>
+<td><div align="center">{{books.PublishDate}}</div></td>
+<td><div align="center">{{books.price}}</div></td>
+</tr>
+<tr><th></th></tr>
+<tr bordercolor="#FFFFFF" bgcolor="#666666">
+<th height="48">authorID</th>
+<th>name</th>
+<th>age</th>
+<th>country</th>
+<th>back</th>
+</tr>
+<tr><th></th></tr>
+<tr bordercolor="#FFFFFF" bgcolor="#666666"><td height="54"><div align="center">{{books.AuthorID.AuthorID}}</div></td>
+<td><div align="center">{{books.AuthorID.name}}</div></td>
+<td><div align="center">{{books.AuthorID.age}}</div></td>
+<td><div align="center">{{books.AuthorID.country}}</div></td>
+<td><div align="center"><a href = "/book_list/"><em>back</em></a></div></td>
+<tr><th></th></tr><tr><th></th></tr><tr><th></th></tr>
+</table>
+{% endfor %}
+<table border=1 align="center" bordercolor="#00FF00" bgcolor="#CCCC99">
+<td bgcolor="#666666"><a href= "/book_list/" class="STYLE2">
+  <input name="button" type = "button"class="STYLE1" style="width:100px;height:50px;" value="return" button/>
+</a></td>
+</table>
+</body>
+</html>

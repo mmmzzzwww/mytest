@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>add_book</title>
+<style type="text/css">
+<!--
+.STYLE2 {
+	color: #33FF99;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 18;
+}
+.STYLE3 {font-size: 18px}
+-->
+</style>
+</head>
+
+<body bgcolor="#616130">
+<div align= "center">
+<h1>Please Add a Author</h1>
+</div>
+<table border=1 align = "center" bordercolor="#FFFFFF" bgcolor="#FFFF33">
+<form name="input" method="post">{% csrf_token %}
+<tr bgcolor="#FFCC00">
+<th width="168" height="57" bgcolor="#666666"><span class="STYLE3">authorID</span></th>
+<th width="168" bgcolor="#666666"><span class="STYLE3">name</span></th>
+<th width="168" bgcolor="#666666"><span class="STYLE3">age</span></th>
+<th width="168" bgcolor="#666666"><span class="STYLE3">country</span></th>
+<th width="71" bgcolor="#666666"><span class="STYLE3">sumbit</span></th>
+<th width="51" bgcolor="#666666"><span class="STYLE3">back</span></th>
+</tr>
+<tr>
+<td height="64" bgcolor="#666666"><input type = "text" name ="AuthorID"/></td>
+<td bgcolor="#666666"><input type = "text" name = "name"/></td>
+<td bgcolor="#666666"><input type = "text" name = "age"/></td>
+<td bgcolor="#666666"><input type = "text" name = "country"/></td>
+<td bgcolor="#666666"><input type = "submit" name= "sumbit"/></td>
+<td bgcolor="#666666"><a href= "/book_list/" class="STYLE2">
+  <input name="button" type = "button"class="STYLE1" style="width:50px;height:20px;" value="return" button/>
+</a></td>
+</tr>
+</form>
+</table>
+</body>
+</html>
